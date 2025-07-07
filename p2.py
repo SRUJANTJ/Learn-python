@@ -11,3 +11,17 @@ minus = 10 - 4
 
 print('Sum:', sum)
 print('Minus:', minus)
+
+# Creating of Variables
+
+
+# Storing Number
+a=10
+# Storing String 
+b="hello"
+# Storing Floating Point 
+c = "1.0"
+
+print("Number", a)
+print("String", b)      
+print("Floating Point", c)
