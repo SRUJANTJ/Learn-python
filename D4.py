@@ -19,3 +19,21 @@ print(type(my_set))
 dupclite_set = {1, 5,5,5}
 print(dupclite_set)
 #Output {1, 5} 
+
+
+
+
+# Binary Type
+
+# A bytes object representing the ASCII characters 'hello'
+b = b'hello'
+print(b)
+#Type check
+print(type(b))
+
+# Creates a mutable bytearray from a bytes object
+ba = bytearray(b'hello')
+# Changes 'h' (104) to 'H' (72)
+ba[0] = 72
+print(ba)
+# Output: bytearray(b'Hello') 
