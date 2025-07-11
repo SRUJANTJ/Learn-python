@@ -15,3 +15,41 @@ print("Modulus:", a % b)
 print("Exponentiation:", a ** b)
 # Floor Division
 print("Floor Division:", a // b)
+
+# Modulus Operator
+print("Modulus Operator:", 10 % 3)
+# Exponentiation Operator
+print("Exponentiation Operator:", 2 ** 3)
+
+
+
+
+
+
+
+
+
+
+
+
+# Comparison 
+# Equal to
+print("Equal to:", a == b)
+# Not equal to
+print("Not equal to:", a != b)
+# Greater than
+print("Greater than:", a > b)
+# Less than
+print("Less than:", a < b)
+# Greater than or equal to
+print("Greater than or equal to:", a >= b)
+# Less than or equal to
+
+print("Less than or equal to:", a <= b)
+
+
+
+
+
+
+
