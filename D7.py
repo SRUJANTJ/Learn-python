@@ -77,6 +77,7 @@ print("Membership in string (not in):", 'z' not in my_string)
 # Identity Operators
 
 ident = 5
+ident1= 5
 
 # Identity is
-print("Is ident 5:", ident is 5)
+print("Is ident 5:", ident == 5)
