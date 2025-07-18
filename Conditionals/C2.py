@@ -29,3 +29,14 @@ if a > 15 or b < 10:
 else:
     print('Both conditions are false')
     
+
+
+
+    # 'not' reverses the result of a condition.
+
+
+an = False
+if not an:
+    print('Condition is False')  # Output: Condition is False
+else:
+    print('Condition is True')
