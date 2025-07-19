@@ -23,3 +23,29 @@ for letter in 'hello':
 # Example 3: Using range() function
 for number in range(5):
     print(number)  # This will print numbers from 0 to 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # While loop example
+    #declaring the variable
+count=0
+while count < 5:
+ print(f"while loop count: {count}")
+ count += 1
