@@ -28,24 +28,13 @@ for number in range(5):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     # While loop example
     #declaring the variable
 count=0
 while count < 5:
  print(f"while loop count: {count}")
  count += 1
+
+
+
+
