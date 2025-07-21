@@ -6,7 +6,9 @@ print("My name is", name, "and I am", age, "years old.")
 
 
 # Basic operations
+# plus
 sum = 5 + 3
+# minus
 minus = 10 - 4
 
 print('Sum:', sum)
