@@ -1,5 +1,13 @@
 # Opening a File
+# The "with" statement is used to wrap the execution of a block of code.
 
+# It automatically manages resources, like opening and closing files.
+
+# When the block under with is done (or an error occurs), it automatically closes the file, even if you forget.
+
+# "as" assigns the opened file object to the variable file.
+
+# You can now use file to write to or read from the file.
 
 # File method
 # 'r' - Read (default mode)
@@ -33,3 +41,7 @@ with open('example.txt', 'r') as file:
     print('Iterating over lines:')
     for line in all_lines:
         print(line.strip())
+
+
+
+
