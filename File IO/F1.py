@@ -58,3 +58,10 @@ with open('example.txt', 'r') as file:
 
 
 
+
+
+# Writing to a File
+# You can write to a file using the .write() or .writelines() methods.
+# Writing to a file
+with open('example.txt', 'w') as file:
+    file.write("Hello, Worldd!")  # Writes a single line to the file
