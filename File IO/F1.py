@@ -17,6 +17,19 @@
 # 't' - Text mode (default)
 
 
+
+
+# | Keyword   | Purpose                                        |
+# | --------- | ---------------------------------------------- |
+# | `with`    | Opens a context and auto-closes the resource   |
+# | `open()`  | Opens the file                                 |
+# | `'w'`     | Mode to write to file                          |
+# | `as file` | Assigns the file object to the variable `file` |
+
+
+
+
+
 # Reading a file
 with open('example.txt', 'r') as file:
     # Read the entire file
