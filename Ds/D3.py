@@ -26,3 +26,32 @@ def print_dict(d):
         print(f"{k}: {v}")
 
 print_dict(student)
+
+
+
+
+# Sets — Unique
+
+# A set is an unordered, mutable collection with no duplicates.
+
+# ✅ No Import Needed
+
+
+numbers = {1, 2, 3, 4, 5}
+
+# 🔧 Built-in Methods
+
+numbers.add(6)             # Add element
+numbers.remove(3)          # Remove element
+numbers.union({7, 8})      # Union of sets
+numbers.intersection({4, 5, 6})  # Common elements
+
+
+
+# 👤 User-Defined Example:
+
+def display_set(s):
+    for item in s:
+        print(item)
+
+display_set(numbers)
