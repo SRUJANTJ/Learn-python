@@ -10,6 +10,7 @@ coordinates = (10, 20)
 coordinates.count(10)       # Count occurrences
 coordinates.index(20)       # Get index
 
+print(coordinates)  # Output: (10, 20)
 
 # 👤 User-Defined Example:
 
