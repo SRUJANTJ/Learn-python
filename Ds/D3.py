@@ -20,7 +20,8 @@ print(student)
 
 # 👤 User-Defined Example:
 
-
+# d.items() → This is a dictionary method that returns a view object containing (key, value) pairs from the dictionary.
+# k=> key, v => value
 def print_dict(d):
     for k, v in d.items():
         print(f"{k}: {v}")
