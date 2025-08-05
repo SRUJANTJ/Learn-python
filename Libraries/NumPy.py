@@ -42,3 +42,5 @@ print(arr.ndim)    # 2 dimensions
 print(arr.size)    # Total elements
 print(arr.dtype)   # Data type (int64, float32, etc.)
 
+
+
