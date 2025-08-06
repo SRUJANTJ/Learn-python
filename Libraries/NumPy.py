@@ -41,6 +41,7 @@ print(arr.shape)   # (2, 3) → 2 rows, 3 columns
 print(arr.ndim)    # 2 dimensions
 print(arr.size)    # Total elements
 print(arr.dtype)   # Data type (int64, float32, etc.)
-
+print(arr.itemsize)
+print(arr.data)
 
 
