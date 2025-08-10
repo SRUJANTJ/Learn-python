@@ -23,6 +23,8 @@ print(dupclite_set)
 
 
 
+
+
 # Binary Type
 
 # A bytes object representing the ASCII characters 'hello'
@@ -36,4 +38,26 @@ ba = bytearray(b'hello')
 # Changes 'h' (104) to 'H' (72)
 ba[0] = 72
 print(ba)
-# Output: bytearray(b'Hello') 
+# Output: bytearray(b'Hello')  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# complex type
+
+# Storing a Complex Number
+c = 3 + 4j
+print(c)  # Output: (3+4j)
+# Type check
+print(type(c))  # Output: <class 'complex'>
+

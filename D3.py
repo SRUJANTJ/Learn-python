@@ -57,3 +57,6 @@ for i in range(2, 6):
 for i in range(1, 10, 2):
  print("Three argument",i)
 # Output: 1, 3, 5, 7, 9
+
+
+
