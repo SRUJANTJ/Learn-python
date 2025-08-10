@@ -61,3 +61,30 @@ print(c)  # Output: (3+4j)
 # Type check
 print(type(c))  # Output: <class 'complex'>
 
+# Using literal notation
+z1 = 2 + 4j
+
+# Using complex() constructor
+z2 = complex(2, 4)  # 2 is real part, 4 is imaginary part
+
+print(z1, z2)   # (2+4j) (2+4j)
+
+
+
+# Accessing Real and Imaginary Parts
+z = 5 + 2j
+print(z.real)  # 5.0
+print(z.imag)  # 2.0
+
+
+
+
+# Built-in Functions for Complex Numbers
+
+import cmath
+
+z = 1 + 1j
+print(abs(z))           # Magnitude -> 1.4142135623730951
+print(cmath.phase(z))   # Phase angle (radians) -> 0.7853981633974483
+print(cmath.polar(z))   # Polar form -> (1.414..., 0.785...)
+print(cmath.rect(2, cmath.pi/4))  # Rectangular form -> (1.4142+1.4142j)
