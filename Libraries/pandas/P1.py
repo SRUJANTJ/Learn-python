@@ -46,3 +46,70 @@ print(df.head())  # First 5 rows
 
 # Handling missing values before feeding into ML.
 
+
+
+
+
+
+# Data Cleaning
+# Before feeding data into an ML model, cleaning is critical to avoid garbage in → garbage out.
+
+
+# Common Data Cleaning Steps
+
+
+# | Task                  | Pandas Function                | Why for ML?                                   |
+# | --------------------- | ------------------------------ | --------------------------------------------- |
+# | Remove missing values | `dropna()`                     | Some models can’t handle NaN values           |
+# | Fill missing values   | `fillna(value)`                | Keep data size same for better generalization |
+# | Change data type      | `astype()`                     | ML algorithms require numeric data            |
+# | Remove duplicates     | `drop_duplicates()`            | Avoid data leakage and bias                   |
+# | Rename columns        | `rename(columns={...})`        | Keep features consistent                      |
+# | Detect outliers       | `.describe()` / `quantile()`   | Outliers can skew models                      |
+# | String cleanup        | `.str.lower()`, `.str.strip()` | Needed for NLP & categorical encoding         |
+
+
+
+
+
+
+# Extra Pandas Concepts for ML
+
+# Feature Engineering with Pandas
+# Normalization / Scaling:
+
+df['Age_norm'] = (df['Age'] - df['Age'].mean()) / df['Age'].std()
+
+
+# Binning Continuous Variables:
+
+
+df['AgeGroup'] = pd.cut(df['Age'], bins=[0, 18, 30, 50], labels=['Teen', 'Young', 'Adult'])
+
+# Encoding Categorical Variables:
+
+df = pd.get_dummies(df, columns=['AgeGroup'], drop_first=True)
+
+
+# Data Aggregation
+# Grouping and summarizing before ML:
+df.groupby('Age')['Score'].mean()
+
+
+
+# Joining / Merging
+
+# Often ML datasets come from multiple sources:
+
+
+merged_df = pd.merge(df1, df2, on='id', how='inner')
+
+
+
+# Time Series Features
+
+
+# If working with temporal data:
+
+df['Date'] = pd.to_datetime(df['Date'])
+df['Month'] = df['Date'].dt.month
