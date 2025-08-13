@@ -101,8 +101,18 @@ df.groupby('Age')['Score'].mean()
 
 # Often ML datasets come from multiple sources:
 
+df1 = pd.DataFrame({
+    'id': [1, 2, 3],
+    'feature1': [10, 20, 30]
+})
+
+df2 = pd.DataFrame({
+    'id': [1, 2, 4],
+    'feature2': [100, 200, 400]
+})
 
 merged_df = pd.merge(df1, df2, on='id', how='inner')
+print(merged_df)
 
 
 
@@ -111,7 +121,9 @@ merged_df = pd.merge(df1, df2, on='id', how='inner')
 
 # If working with temporal data:
 
-df['Date'] = pd.to_datetime(df['Date'])
+# Example: Creating a Date column and extracting Month feature
+df['Date'] = pd.to_datetime(['2024-01-15', '2024-02-20', '2024-03-10'])
 df['Month'] = df['Date'].dt.month
+print(df[['Date', 'Month']])
 
 
