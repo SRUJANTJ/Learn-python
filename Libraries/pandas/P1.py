@@ -113,3 +113,5 @@ merged_df = pd.merge(df1, df2, on='id', how='inner')
 
 df['Date'] = pd.to_datetime(df['Date'])
 df['Month'] = df['Date'].dt.month
+
+
