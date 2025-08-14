@@ -18,3 +18,12 @@ df.to_csv('students.csv', index=False)
 # Getting  Data into Pandas
 data = pd.read_csv('students.csv')
 print(data)
+
+
+# Explore the Data
+print("Explore the Data")
+
+
+print("Data types + missing values",df.info())      # Data types + missing values
+print("Summary statistics ",df.describe())  # Summary statistics (numeric only)
+print(" First 5 rows",df.head())      # First 5 rows
