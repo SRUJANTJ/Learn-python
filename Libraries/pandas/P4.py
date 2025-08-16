@@ -48,3 +48,8 @@ print(df)
 # Mean is affected by very big or very small numbers.
 
 # Median is just the middle, so it ignores extremes.
+
+
+
+
+
