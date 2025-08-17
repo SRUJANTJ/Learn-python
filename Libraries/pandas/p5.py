@@ -19,6 +19,8 @@ print(df)
 # subset → Check duplicates only in certain columns.
 
 # Detecting Outliers
+
+
 # Outliers mean the data points that are very different (far away) from the rest of the data.
 # Example: If most students score 70–95, but one student has 10, that 10 is an outlier.
 
@@ -32,3 +34,5 @@ std = df['Scores'].std()
 outliers = df[(df['Scores'] < mean - 2*std) | (df['Scores'] > mean + 2*std)]
 
 print("Outliers:\n", outliers)
+
+
