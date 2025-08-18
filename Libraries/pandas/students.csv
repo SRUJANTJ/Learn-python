@@ -1,6 +1,7 @@
-StudentID,HoursStudied,PreviousScore,FinalScore
-1,5,50,55
-2,10,60,65
-2,15,70,75
-4,20,80,85
-0,,90,95
+Name,Age,Score,Gender,Hours_Study,Performance_Level,Age_Study
+Alice,25,85,0,5,Medium,125
+Bob,30,90,1,6,High,180
+Charlie,35,95,1,8,High,280
+David,31.8,88,1,7,Medium,222.6
+Eva,40,76,0,4,Low,160
+Frank,29,89,1,5,Medium,145

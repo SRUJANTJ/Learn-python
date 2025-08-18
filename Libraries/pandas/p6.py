@@ -1,3 +1,5 @@
+
+# We’ll make a simple dataset representing a student performance prediction scenario.
 import pandas as pd
 
 df = pd.DataFrame({
@@ -15,6 +17,8 @@ df['Gender'] = df['Gender'].map({'M': 1, 'F': 0})
 df['Performance_Level'] = pd.cut(df['Score'],
                                  bins=[0, 80, 90, 100],
                                  labels=['Low', 'Medium', 'High'])
+
+
 # Feature Engineering is the process of creating, transforming, or selecting features (columns/variables) from raw data to make them more useful for ML models.
 # 👉 In simple words:
 # It’s like preparing better ingredients before cooking — the better your features, the better your model learns.
