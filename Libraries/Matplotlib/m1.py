@@ -33,5 +33,7 @@ plt.ylabel("Y-axis")
 plt.title("Basic Line Plot")
 
 # Show legend and graph
+# Legends describe each line/point/bar when you have multiple plots.
 plt.legend()
+# Without plt.show(), the plot might not display (especially in some IDEs or scripts).
 plt.show()
