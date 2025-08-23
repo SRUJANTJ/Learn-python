@@ -16,6 +16,9 @@ plt.show()
 
 
 # Scatter Plot – For feature relationships
+# scatter dot represent how the each dot is relate/ match to x and y
+#  Scatter plots are useful for visualizing relationships between two features.
+# For example, we might want to see how two features correlate in a dataset.
 x = np.random.rand(50)
 y = x * 2 + np.random.rand(50)
 
@@ -24,3 +27,4 @@ plt.xlabel("Feature X")
 plt.ylabel("Feature Y")
 plt.title("Feature Relationship")
 plt.show()
+
