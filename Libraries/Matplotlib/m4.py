@@ -69,3 +69,41 @@ plt.show()
 # Removing them → model loses signal → predictive power drops.
 
 # Removing low-importance ones → barely any effect.
+
+
+
+# Multiple Plots
+x = np.linspace(0, 10, 100)
+plt.subplot(1, 2, 1)   # (rows, cols, position)
+plt.plot(x, np.sin(x))
+plt.title("Sine")
+
+plt.subplot(1, 2, 2)
+plt.plot(x, np.cos(x))
+plt.title("Cosine")
+
+plt.show()
+
+# sin(x) → The sine wave, which oscillates up and down between -1 and +1.
+
+# cos(x) → The cosine wave, which is similar to sine but shifted to the left (a phase shift).
+
+
+# sine and cosine are wave functions 
+
+# Imagine a circular wheel rotating.
+
+# If you track a point on the edge:
+
+# The up and down motion (height) is the sine wave.
+
+# The side-to-side motion is the cosine wave.
+
+# In ML, we don’t usually care about sine/cosine directly.
+# We replace those curves with:
+
+# Training loss curve → usually goes down as model improves.
+
+# Accuracy curve → usually goes up as model learns.
+
+# The sine/cosine demo just shows how Matplotlib can plot functions that move up and down.
