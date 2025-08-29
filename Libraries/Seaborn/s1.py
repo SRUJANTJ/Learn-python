@@ -33,8 +33,8 @@
 # Built-in statistical plotting.
 
 # Easier handling of Pandas DataFrames.
- 
-
+#  (A) Distribution Plots
+# Show how data is distributed.
 
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -46,3 +46,9 @@ data = np.random.normal(loc=0, scale=1, size=1000)
 # Histogram + KDE
 sns.histplot(data, kde=True, bins=30, color='skyblue')
 plt.show()
+
+# histplot() → histogram with optional KDE (Kernel Density Estimation)
+
+# kdeplot() → smooth curve showing distribution
+
+# Useful for checking normality or skewness of features.
