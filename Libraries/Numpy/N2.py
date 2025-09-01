@@ -1,4 +1,5 @@
 # Vectorized Operations
+# In NumPy, vectorization means performing operations on entire arrays (vectors, matrices, tensors) without writing explicit Python loops.
 
 
 data = [1, 2, 3]
