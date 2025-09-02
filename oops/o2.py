@@ -38,3 +38,35 @@ class Details1:
 obj2 = Details1()
 print(obj2.animal)
 #animal Crab belongs to Crustaceans group
+
+
+# Decorators
+
+# A decorator is a callable object that takes another function as its argument and returns a new function. This new function is typically a modified version of the original function, with additional functionality added.
+
+print("\nDecorators")
+
+
+def my_decorator(func):
+    # Define a decorator function called my_decorator that takes another function (func) as an argument.
+    def wrapper():
+        # This is the wrapper function inside the decorator that will run before and after the original function.
+        print("Something is happening before the function is called.")
+        # Print a message before executing the original function to indicate pre-function behavior.
+        func()  
+        # Call the original function passed into the decorator (say_hello in this case).
+        print("Something is happening after the function is called.")
+        # Print a message after executing the original function to indicate post-function behavior.
+    return wrapper
+    # Return the wrapper function which will replace the original function when it's decorated.
+
+@my_decorator
+# Apply the my_decorator to the say_hello function using the @ decorator syntax.
+def say_hello():
+    # Define a simple function say_hello that prints "Hello!".
+    print("Hello!")
+    # Print the message "Hello!" when the say_hello function is called.
+
+# Calling the decorated function.
+say_hello()
+# Invoke the say_hello function, which is now wrapped by the my_decorator. This will print the before and after messages, followed by "Hello!".
