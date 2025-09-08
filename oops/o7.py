@@ -19,3 +19,24 @@ class Car:
 my_car = Car("Toyota", "Camry")
 print(my_car.display_info())  # Output: Car: Toyota Camry
 print(my_car.brand)           # Output: Toyota
+
+
+
+# Protected
+# Protected members are indicated by a single underscore prefix (_). They are intended to be accessed only within the class and by derived classes (subclasses). They should not be accessed directly from outside the class, although they can still be accessed if necessary (it’s more of a convention).
+
+class Animal:
+    def __init__(self, name):
+        self._name = name  # Protected attribute
+
+    def _make_sound(self):  # Protected method
+        return "Some sound"
+
+class Dog(Animal):
+    def bark(self):
+        return f"{self._name} says Woof!"
+
+# Creating an object of the Dog class
+my_dog = Dog("Buddy")
+print(my_dog.bark())  # Output: Buddy says Woof!
+print(my_dog._make_sound())  # Output: Some sound (not recommended)
