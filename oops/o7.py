@@ -70,3 +70,14 @@ account = BankAccount()
 account.deposit(100)
 print(account.get_balance())  # Output: 100
 # print(account.__balance)  # AttributeError: 'BankAccount' object has no attribute '__balance'
+
+
+
+
+
+# Summary of Access Modifiers
+# Public: Accessible from anywhere (default).
+
+# Protected: Intended for use within the class and subclasses (conventionally accessible but not recommended from outside).
+
+# Private: Not accessible from outside the class (name mangling used).
