@@ -14,3 +14,30 @@ dog1 = Dog("Buddy", 3)
 dog2 = Dog("Max", 5)
 print(dog1.name)  # Output: Buddy
 print(dog2.name)  # Output: Max
+
+
+
+
+
+# Class Variables
+# Definition: Class variables are attributes shared across all instances of a class. They are defined directly within the class, outside of any instance methods.
+# 
+# Declaration: Defined directly under the class definition, without using self.
+# 
+# Scope: Shared among all instances of the class; if modified through the class name, the change is reflected across all instances.
+
+
+class Dogs:
+    species = "Canis lupus familiaris"  # Class variable
+    def __init__(self, name, age):
+        self.name = name  # Instance variable
+        self.age = age    # Instance variable
+# Creating instances
+dogs1 = Dogs("Buddy", 3)
+dogs2 = Dogs("Max", 5)
+print(dogs1.species)  # Output: Canis lupus familiaris
+print(dogs2.species)  # Output: Canis lupus familiaris
+# Modifying the class variable
+Dogs.species = "Canis lupus"
+print(dogs1.species)  # Output: Canis lupus
+print(dogs2.species)  # Output: Canis lupus
