@@ -24,3 +24,30 @@
 
 x = [1, 2, 3]
 print(dir(x))
+
+
+
+
+
+
+
+
+
+# The __dict__ attribute
+# __dict__: The __dict__ attribute returns a dictionary representation of an object's attributes. It is a useful tool for introspection.
+
+# __dict__ attribute in Python is used to make a dictionary of an object's attributes (data) and their values.
+
+
+# " self " keyword is used to access the instance data (attributes and methods) within a class.
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+# Creating an object
+p = Person("John", 30)
+# Accessing __dict__ to get the attributes as a dictionary
+print(p.__dict__)
+
+# Output: {'name': 'John', 'age': 30}
