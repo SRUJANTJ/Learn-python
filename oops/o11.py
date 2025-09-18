@@ -51,3 +51,44 @@ p = Person("John", 30)
 print(p.__dict__)
 
 # Output: {'name': 'John', 'age': 30}
+
+
+
+
+
+
+# help() method
+# The help() function is used to get help documentation for an object, including a description of its attributes and methods. Example:
+
+# help() method in Python is used to get the documentation of a class, method, or function.
+
+# When you call help() on a class or a method, it provides information about the class, its attributes, methods, and docstrings (if available). This is useful for understanding how to use a class or method.
+
+
+
+class Person:
+    """This is the Person class, which represents a person."""
+    def __init__(self, name, age):
+        """Initializes the name and age attributes."""
+        self.name = name
+        self.age = age
+    def greet(self):
+        """Greets the person."""
+        return f"Hello, my name is {self.name} and I am {self.age} years old."
+# To get documentation about the class
+help(Person)
+# To get documentation about the greet method
+help(Person.greet)
+
+# Help on class Person in module __main__:
+# 
+# class Person(builtins.object)
+#  |  This is the Person class, which represents a person.
+#  | 
+#  |  Methods defined here:
+#  | 
+#  |  __init__(self, name, age)
+#  |      Initializes the name and age attributes.
+#  | 
+#  |  greet(self)
+#  |      Greets the person.
