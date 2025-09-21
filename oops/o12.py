@@ -35,3 +35,39 @@ class Person:
 
 p = Person("Alice")
 print(p.name)  # Output: Alice
+
+
+# __str__ and __repr__
+# The str and repr methods are both used to convert an object to a string representation. The str method is used when you want to print out an object, while the repr method is used when you want to get a string representation of an object that can be used to recreate the object.
+print("\n __str__ and __repr__ example _\n")
+class Person1:
+    def __init__(self, name):
+        self.name = name
+
+    def __str__(self):
+        return f"Person named {self.name}"
+
+    def __repr__(self):
+        return f"Person('{self.name}')"
+
+p = Person1("Alice")
+print(p)  # Output: Person named Alice
+print(repr(p))  # Output: Person('Alice')
+
+
+
+# __add__ method
+# The __add__ method allows you to define custom behavior for the + operator for instances of your class. This can be useful if you want to add objects of your class or combine their properties in a specific way.
+
+print("\n __add__ method example _\n")
+
+class Number:
+    def __init__(self, value):
+        self.value = value
+
+    def __add__(self, other):
+        return self.value + other.value
+
+n1 = Number(5)
+n2 = Number(10)
+print(n1 + n2)  # Output: 15
