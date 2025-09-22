@@ -71,3 +71,19 @@ class Number:
 n1 = Number(5)
 n2 = Number(10)
 print(n1 + n2)  # Output: 15
+
+
+
+# __len__ method
+# The len method is used to get the length of an object. This is useful when you want to be able to find the size of a data structure, such as a list or dictionary.
+print("\n __len__ method example _\n")
+
+class MyList:
+    def __init__(self, items):
+        self.items = items
+
+    def __len__(self):
+        return len(self.items)
+
+lst = MyList([1, 2, 3])
+print(len(lst))  # Output: 3
