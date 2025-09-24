@@ -21,7 +21,7 @@ print(lst[1])  # Output: 20
 
 # __call__ method
 # The __call__ method is useful for making objects behave like functions, enabling more flexible and dynamic behavior. It allows objects to execute code when "called," which can be useful in many scenarios like callbacks, decorators, or simplifying code structure.
-
+print("\n __call_ method example _\n")
 
 class Greeter:
     def __init__(self, name):
@@ -37,5 +37,3 @@ print(greet())  # Output: Hello, Alice!
 
 
 
-# __call__ method
-# The __call__ method is useful for making objects behave like functions, enabling more flexible and dynamic behavior. It allows objects to execute code when "called," which can be useful in many scenarios like callbacks, decorators, or simplifying code structure.
