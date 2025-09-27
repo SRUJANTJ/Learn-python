@@ -48,3 +48,20 @@ num2 = Number(10)
 result = num1 + num2  # Calls the __add__ method
 
 print(result)  # Output: 15
+
+
+
+# Some common magic methods for operator overloading:
+# __add__(self, other): Overloads the + operator
+
+# __sub__(self, other): Overloads the - operator
+
+# __mul__(self, other): Overloads the * operator
+
+# __eq__(self, other): Overloads the == operator
+
+# __lt__(self, other): Overloads the < operator
+
+# __gt__(self, other): Overloads the > operator
+
+# __truediv__(self, other): Overloads the / operator
