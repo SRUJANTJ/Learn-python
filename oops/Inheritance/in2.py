@@ -44,3 +44,6 @@ class GoldenRetriever(Dog):
 
 dog = GoldenRetriever("Max", "Golden")
 dog.show_details() 
+
+
+# As we can see from the output, the GoldenRetriever object has access to all the attributes and methods of the Animal and Dog classes, and, it has also added its own unique attributes and methods. This is a powerful feature of multilevel inheritance, as it allows you to create more complex and intricate classes by building upon existing ones.Another important aspect of multilevel inheritance is that it allows you to reuse code and avoid repeating the same logic multiple times. This can lead to better maintainability and readability of your code, as you can abstract away complex logic into base classes and build upon them.In conclusion, multilevel inheritance is a powerful feature in object-oriented programming that allows you to create complex and intricate classes by building upon existing ones. It provides the benefits of code reuse, maintainability, and readability, while also requiring careful consideration to avoid potential problems.
