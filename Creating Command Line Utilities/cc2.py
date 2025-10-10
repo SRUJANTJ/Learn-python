@@ -19,3 +19,4 @@ if args.operation == "add":
     print(args.num1 + args.num2)
 else:
     print(args.num1 - args.num2)
+# It creates a variable named parser that holds an ArgumentParser object, and gives that parser a description text (“Simple calculator program”) used only for help output.
