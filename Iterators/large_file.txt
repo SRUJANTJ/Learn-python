@@ -1,0 +1,85 @@
+# read_large_file_iterators.py
+# Demonstrates memory-efficient iteration patterns for a large text file.
+# Update FILE_PATH to point to your file if needed.
+
+from pathlib import Path
+from itertools import islice
+from typing import Iterator, List
+
+FILE_PATH = Path("G:/Learn-python/Iterators/large_file.txt")
+ENCODING = "utf-8"
+
+
+def ensure_sample_file(path: Path, lines: int = 100_000) -> None:
+    """Create a sample large file only if the file is missing or empty."""
+    if not path.exists() or path.stat().st_size == 0:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with path.open("w", encoding=ENCODING) as f:
+            for i in range(1, lines + 1):
+                f.write(f"This is line {i}\n")
+
+
+def iterate_lines(path: Path) -> Iterator[str]:
+    """Simple, memory-efficient line iterator (the file object is an iterator)."""
+    with path.open("r", encoding=ENCODING) as f:
+        for line in f:
+            yield line.rstrip("\n")
+
+
+def batched_lines(path: Path, batch_size: int) -> Iterator[List[str]]:
+    """Yield lists of lines in batches (useful for bulk processing)."""
+    with path.open("r", encoding=ENCODING) as f:
+        while True:
+            batch = list(islice(f, batch_size))
+            if not batch:
+                break
+            yield [s.rstrip("\n") for s in batch]
+
+
+def chunked_bytes(path: Path, chunk_size: int) -> Iterator[bytes]:
+    """Read the file in fixed-size byte chunks (binary mode)."""
+    with path.open("rb") as f:
+        for chunk in iter(lambda: f.read(chunk_size), b""):
+            yield chunk
+
+
+def demo_count_lines(path: Path) -> int:
+    """Count lines using the line iterator (no large memory spike)."""
+    return sum(1 for _ in iterate_lines(path))
+
+
+def demo_find_first(path: Path, substring: str):
+    """Find first line containing substring; returns (lineno, line) or None."""
+    for i, line in enumerate(iterate_lines(path), start=1):
+        if substring in line:
+            return i, line
+    return None
+
+
+if __name__ == "__main__":
+    # Ensure there's something to iterate (only creates a sample if missing/empty).
+    ensure_sample_file(FILE_PATH, lines=100_000)
+
+    # Example 1: Count lines (fast and memory efficient)
+    total = demo_count_lines(FILE_PATH)
+    print(f"Total lines: {total}")
+
+    # Example 2: Find first match
+    res = demo_find_first(FILE_PATH, "line 50000")
+    if res:
+        lineno, text = res
+        print(f"Found at {lineno}: {text}")
+
+    # Example 3: Process in batches
+    print("Processing first 3 batches of 10 lines each:")
+    for idx, batch in enumerate(batched_lines(FILE_PATH, batch_size=10)):
+        print(f" Batch {idx+1}, first line: {batch[0]}")
+        if idx >= 2:
+            break
+
+    # Example 4: Read in byte chunks
+    print("Reading first 3 chunks of 1024 bytes:")
+    for i, chunk in enumerate(chunked_bytes(FILE_PATH, 1024)):
+        print(f" Chunk {i+1}, bytes read: {len(chunk)}")
+        if i >= 2:
+            break
