@@ -15,3 +15,14 @@
 import re
 result = re.search(r'cat', 'The cat is on the roof')
 print(result)  # Output: <re.Match object; span=(4, 7), match='cat'>
+
+
+
+
+print('\n regex re.match() example \n')
+
+# re.match()
+# # Checks if the beginning of the string matches the pattern.
+
+result1 = re.match(r'cat', 'cat on the roof')
+print(result1)  # Output: <re.Match object; span=(0, 3), match='cat'>
