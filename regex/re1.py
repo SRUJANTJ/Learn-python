@@ -26,3 +26,25 @@ print('\n regex re.match() example \n')
 
 result1 = re.match(r'cat', 'cat on the roof')
 print(result1)  # Output: <re.Match object; span=(0, 3), match='cat'>
+
+
+
+
+print('\n regex re.findall() example \n')
+
+# re.findall()
+# Finds all occurrences of a pattern in a string and returns them as a lis
+result2 = re.findall(r'\d+', 'There are 12 cats, 4 dogs, and 7 birds')
+print(result2)  # Output: ['12', '4', '7']
+
+
+
+
+
+print('\n regex re.sub() example \n')
+# re.sub()
+# Replaces all occurrences of a pattern with a new string.
+
+
+result3 = re.sub(r'cat', 'dog', 'The cat is cute')
+print(result3)  # Output: 'The dog is cute'
